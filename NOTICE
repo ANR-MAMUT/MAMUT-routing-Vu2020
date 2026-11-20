@@ -1,0 +1,11 @@
+MAMUT-routing Vu2020 third-party and data-license notice
+========================================================
+
+This repository holds the Vu2020 benchmark family of MAMUT-routing (https://github.com/ANR-MAMUT/MAMUT-routing). MAMUT-routing is a mixed software and benchmark project. Its source code is MIT-licensed unless a file says otherwise. Benchmark data and generated artifacts are licensed at the benchmark-family level, and the LICENSE file of this repository gives the terms of this family.
+
+Component licensing
+-------------------
+
+- Vu2020 (TDVRPTW and TDVRP): MAMUT-routing curation artifacts are provided under MIT where MAMUT-routing holds the relevant rights. The underlying raw files originate from the Vu et al. (2020) time-dependent TSPTW benchmark material.
+
+Users redistributing this benchmark family, or a subset of it, should preserve this NOTICE and the README.md and LICENSE files of this repository.

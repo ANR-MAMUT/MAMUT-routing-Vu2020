@@ -1,11 +1,11 @@
 SPDX-License-Identifier: MIT
 
 To the extent MAMUT-routing holds the relevant rights, the MAMUT-routing
-curation artifacts in this satellite repository (instances in the MAMUT shape,
+curation artifacts in this repository (instances in the MAMUT shape,
 arrival-time-function sidecars, best-known solution records, and metadata) are
 distributed under the MIT License below.
 
-This satellite family curates third-party benchmark material; see the
+This family curates third-party benchmark material; see the
 provenance section of README.md. This license notice does not claim to
 relicense the underlying third-party benchmark definitions or third-party
 best-known solution sources beyond the rights held by MAMUT-routing
