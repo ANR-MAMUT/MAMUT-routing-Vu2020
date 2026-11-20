@@ -215,7 +215,7 @@
     "horizon": [0.0, 1700.0],
     "td": {
         "model": "atf-ndcpwlf",
-        "atf_path": "Vu-A1-pB-d80-w150.atf.json.gz",
+        "atf_path": "sidecars/n=99/Vu-A1-pB-d80-w150.atf.json.gz",
         "atf_sha256": "e326bf10ae1684b6c429eab2af7abd6684e3516c48746f7a82f9895c4f3d3eef"
     },
     "metadata": {
