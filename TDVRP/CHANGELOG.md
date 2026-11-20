@@ -1,0 +1,24 @@
+# Changelog — Vu2020 TDVRP BKS
+
+All notable changes to the curated `Vu2020` TDVRP best-known solutions (BKS) are recorded here. Objective: **Duration** (duration minimization — the depot departure time of each route is a decision variable). Costs are the authoritative output of the canonical checker (`mamut_routing_lib.td.check_td_solution`): exact IEEE-754 double arithmetic, no epsilon thresholds, routes in canonical order (sorted by first customer), total summed in that order — so any strict improvement is real. Reminder: this family is the VRP variant curated by Onyr (see README.md), so these BKS are not comparable with published TD-TSPTW results on the underlying raw files.
+
+## 2026-09-24
+
+**Re-priced under the `td-fold/2` checker contract (mamut-routing-lib 0.12.0); no route changed.** mamut-routing-lib 0.12.0 replaces the TD checker's route fold (checker contract `td-fold/1` -> `td-fold/2`): waiting and service at a vertex are now applied exactly to the accumulated arrival times instead of being composed through a ratio interpolation, the departure window restricts the first arc without interpolation, and travel on slope-one pieces is computed by addition. Under `td-fold/1` a ready time could be off by an ulp, and on stepwise travel-time functions such an ulp could land past a step and read its upper branch. All 168 BKS were re-priced with `mamut-routing bks reprice-td`: no cost moved; 2 files were rewritten only to refresh `route_durations` / `route_departure_times` by ulps.
+
+
+## 2026-07-08
+
+129 of 168 BKS improved (mean -0.17%, largest single improvement -0.84%) by a 20,808-run anytime-strategy head-to-head campaign on Grid'5000: kayros 0.4.0.dev0 (TD-ILS, TD-ACO+LS, and an ACO-then-ILS budget split, all over the granular time-dependent local search), per-size time limits (120 s for n<=30, 300 s for n<=60, 600 s for n<=100), seeds {42, 123, 456}, single-threaded runs. Improve-only fold: for each instance the campaign-best solution was re-priced by the canonical checker before writing (checker cost authoritative); stored BKS marked proven optimal were left untouched.
+
+## 2026-07-06 — local-search sweep
+
+All 168 BKS improved by the first sweep of kayros 0.2.0.dev0 TD-ACO with time-dependent local search (tree-evaluated VND, every accepted move repriced by the checker-identical fold), 10 seeds per instance on Grid'5000.
+
+## 2026-07-06 — initial seeding sweep
+
+Initial BKS population, 168/168: the TDVRP variant had no legacy solutions, so all BKS come from the initial large-scale seeding sweep across all four TD families run on 2026-07-04 (kayros 0.0.1 TD-ACO, Grid'5000, 10 seeds per instance, 13 520 runs total).
+
+## 2026-07-03
+
+Family populated (168 curated instances + ATF sidecars), no BKS yet.
