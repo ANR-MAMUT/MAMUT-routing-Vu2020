@@ -1,0 +1,37 @@
+{
+  "benchmark_revision": "r1",
+  "default_profile": "td-binary64-exact-v1",
+  "family": "Vu2020",
+  "features": [
+    "single-depot",
+    "homogeneous-capacity",
+    "mandatory-visits",
+    "time-dependent-travel",
+    "service-start-windows"
+  ],
+  "instance": {
+    "path": "TDVRPTW/n=59/Vu-A2-pB-d80-w40.vrp.json",
+    "sha256": "d4d864ae5341084c1f21329c4f1febfd2e782ace334a430f927b714bac173692"
+  },
+  "instance_name": "Vu-A2-pB-d80-w40",
+  "materialization": {
+    "atf_stream_sha256": "80ea093b6a8260f668ac9d1b3457bc32b565097fc17de1801a53b17f83d7ce8f",
+    "canonical_atf_sha256": "da6a527c58471b69b11d2a3eb62e365358a8b8c096a60b73d326d39a211c940f",
+    "interpretation": "binary64",
+    "kind": "stored-atf"
+  },
+  "objective": "Duration",
+  "problem": "TDVRPTW",
+  "sidecars": [
+    {
+      "path": "sidecars/n=59/Vu-A2-pB-d80-w40.atf.json.gz",
+      "scope": "decompressed",
+      "sha256": "da6a527c58471b69b11d2a3eb62e365358a8b8c096a60b73d326d39a211c940f"
+    }
+  ],
+  "specification": "mamut-routing/0.1-review",
+  "units": {
+    "cost": "Vu2020 benchmark time unit",
+    "time": "Vu2020 benchmark time unit"
+  }
+}
