@@ -23,7 +23,7 @@ The family ships **168 instances** per variant, not the full 840. It keeps one i
 
 - `<Name>.vrp.json`: the instance in the MAMUT shape, with depot 0, mandatory display `coordinates` (deterministic stress-layout embedding of the symmetric raw distance matrix, near-exact here, quality in `metadata.coordinates_method`), `horizon` `[0, depot due date]`, and a `td` block with the sidecar path and the sidecar's storage-independent sha256.
 - `<Name>.atf.json.gz`: the canonical ground truth, one arrival-time NDCPWLF per arc, exact IGP consolidation (breakpoints at every speed-zone boundary crossing, exact forward Ichoua re-evaluation, last zone extended beyond the horizon). All sidecars are gzipped in this repository.
-- `<Name>.bks.Duration.json`: best known solution under the `Duration` objective. Costs are always the canonical checker's output.
+- `<Name>.bks.Duration.json`: best known solution under the `Duration` objective. Edition `r1` uses `td-binary64-exact-v1`. The checker evaluates the materialized binary64 arc data with exact rational arithmetic and records each route's minimum duration and earliest departure attaining it. The certified solution cost is the fraction in `metadata.standard.authoritative_cost`. The top-level `cost` is its binary64 display.
 
 Population pipeline: `populate_td_ari_vu` v1 (curation tooling maintained outside this repository, links will be published with the benchmark paper).
 
