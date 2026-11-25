@@ -29,7 +29,7 @@
       "sha256": "500c9ca04c2e5ffcbef2f6ed6ecf41a369b65d66d2463f4feb1eb1ad9bdf24a8"
     }
   ],
-  "specification": "mamut-routing/0.1-review",
+  "specification": "mamut-routing/0.1",
   "units": {
     "cost": "Vu2020 benchmark time unit",
     "time": "Vu2020 benchmark time unit"
